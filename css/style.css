@@ -222,7 +222,7 @@ mark.todo { background: #f6e6b4; color: #6b4b00; padding: 0 .3em; border-radius:
 .price-list small { display: block; color: var(--muted); font-size: .82rem; }
 
 /* Galeria */
-.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 3rem; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 3rem; }
 .gallery figure { margin: 0; position: relative; aspect-ratio: 1; overflow: hidden; background: #ddd5c6; }
 .gallery img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: transform 1s ease; }
 .gallery figure:hover img { transform: scale(1.04); }
