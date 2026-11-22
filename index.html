@@ -253,7 +253,23 @@
     <figure><img src="images/otoczenie.jpg" alt="Zielony teren siedliska na tle lasu" loading="lazy"><figcaption>Otoczenie</figcaption></figure>
     <figure><img src="images/grill.jpg" alt="Grill w ogrodzie o zachodzie słońca" loading="lazy"><figcaption>Ognisko i grill</figcaption></figure>
     <figure><img src="images/plac-zabaw.jpg" alt="Trampolina i plac zabaw przy domkach" loading="lazy"><figcaption>Plac zabaw</figcaption></figure>
-    <figure class="ph"><figcaption>Roztocze jesienią</figcaption></figure>
+    <!-- Album: po kliknięciu otwierają się wszystkie zdjęcia z listy poniżej -->
+    <figure class="album">
+      <img src="images/jesien-1.jpg" alt="Dom wakacyjny z pergolą jesienią, na trawie czerwone liście" loading="lazy">
+      <figcaption>Siedlisko jesienią</figcaption>
+      <span class="album-count">9 zdjęć</span>
+      <div class="album-photos" hidden>
+        <img data-src="images/jesien-1.jpg" alt="Dom wakacyjny z pergolą jesienią, na trawie czerwone liście">
+        <img data-src="images/jesien-2.jpg" alt="Leśna droga na Roztoczu w jesiennych kolorach">
+        <img data-src="images/jesien-3.jpg" alt="Drewniany szyld Siedlisko pod Lasem w jesiennym słońcu">
+        <img data-src="images/jesien-4.jpg" alt="Kamienny domek z zadaszonym gankiem i drewnem na opał">
+        <img data-src="images/jesien-5.jpg" alt="Palenisko na tarasie, w tle ogród z huśtawką i las">
+        <img data-src="images/jesien-6.jpg" alt="Zadaszony taras z drewnianym stołem i dyniami">
+        <img data-src="images/jesien-7.jpg" alt="Beczka z dyniami przy wejściu na taras">
+        <img data-src="images/jesien-8.jpg" alt="Widok z wnętrza domku przez okno na taras">
+        <img data-src="images/jesien-9.jpg" alt="Drewniana huśtawka w ogrodzie jesienią">
+      </div>
+    </figure>
   </div>
   <p class="center gallery-more">Więcej zdjęć na <a href="https://www.instagram.com/siedliskopodlasem_roztocze/" target="_blank" rel="noopener">Instagramie</a> i <a href="https://www.facebook.com/siedliskopodlasemroztocze/" target="_blank" rel="noopener">Facebooku</a></p>
 </section>
@@ -410,7 +426,10 @@
 <!-- Powiększanie zdjęć -->
 <div class="lightbox" id="lightbox" hidden>
   <button class="lightbox-close" aria-label="Zamknij">×</button>
+  <button class="lightbox-prev" aria-label="Poprzednie zdjęcie">‹</button>
   <img src="" alt="">
+  <button class="lightbox-next" aria-label="Następne zdjęcie">›</button>
+  <p class="lightbox-count"></p>
 </div>
 
 <script src="js/main.js"></script>

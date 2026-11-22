@@ -99,20 +99,65 @@ document.querySelectorAll('.rev-btn').forEach(btn => {
   });
 });
 
-// Powiększanie zdjęć (galeria i domki)
+// Powiększanie zdjęć z przewijaniem (strzałki, klawiatura, przesunięcie palcem)
 const lightbox = document.getElementById('lightbox');
 const lbImg = lightbox.querySelector('img');
-document.querySelectorAll('.gallery img, .unit-img img, .unit-thumbs img').forEach(img => {
-  img.style.cursor = 'zoom-in';
-  img.addEventListener('click', () => {
-    lbImg.src = img.src;
-    lbImg.alt = img.alt;
-    lightbox.hidden = false;
+const lbCount = lightbox.querySelector('.lightbox-count');
+let lbSet = [];
+let lbIndex = 0;
+
+const showPhoto = i => {
+  lbIndex = (i + lbSet.length) % lbSet.length;
+  lbImg.src = lbSet[lbIndex].src;
+  lbImg.alt = lbSet[lbIndex].alt;
+  lbCount.textContent = lbSet.length > 1 ? `${lbIndex + 1} / ${lbSet.length}` : '';
+  lightbox.classList.toggle('single', lbSet.length < 2);
+};
+const openLightbox = (set, i) => {
+  lbSet = set;
+  showPhoto(i);
+  lightbox.hidden = false;
+  document.body.style.overflow = 'hidden';
+};
+const closeLightbox = () => {
+  lightbox.hidden = true;
+  lbImg.src = '';
+  document.body.style.overflow = '';
+};
+const toItem = img => ({ src: img.dataset.src || img.src, alt: img.alt });
+
+// Grupy zdjęć: galeria, album jesienny, każdy domek osobno
+const galleryImgs = [...document.querySelectorAll('.gallery > figure:not(.album) > img')];
+const groups = [galleryImgs, ...[...document.querySelectorAll('.unit-media')].map(m => [...m.querySelectorAll('img')])];
+groups.forEach(imgs => {
+  const set = imgs.map(toItem);
+  imgs.forEach((img, i) => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => openLightbox(set, i));
   });
 });
-const closeLightbox = () => { lightbox.hidden = true; lbImg.src = ''; };
-lightbox.addEventListener('click', e => { if (e.target !== lbImg) closeLightbox(); });
+document.querySelectorAll('.album').forEach(album => {
+  const set = [...album.querySelectorAll('.album-photos img')].map(toItem);
+  album.style.cursor = 'zoom-in';
+  album.addEventListener('click', () => openLightbox(set, 0));
+});
+
+lightbox.querySelector('.lightbox-prev').addEventListener('click', e => { e.stopPropagation(); showPhoto(lbIndex - 1); });
+lightbox.querySelector('.lightbox-next').addEventListener('click', e => { e.stopPropagation(); showPhoto(lbIndex + 1); });
+lightbox.addEventListener('click', e => { if (e.target === lightbox || e.target.classList.contains('lightbox-close')) closeLightbox(); });
+let touchX = null;
+lightbox.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+lightbox.addEventListener('touchend', e => {
+  if (touchX === null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 40) showPhoto(lbIndex + (dx < 0 ? 1 : -1));
+  touchX = null;
+});
 document.addEventListener('keydown', e => {
+  if (!lightbox.hidden) {
+    if (e.key === 'ArrowRight') showPhoto(lbIndex + 1);
+    if (e.key === 'ArrowLeft') showPhoto(lbIndex - 1);
+  }
   if (e.key !== 'Escape') return;
   closeLightbox();
   if (!menu.hidden) setMenu(false);

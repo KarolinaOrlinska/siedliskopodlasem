@@ -238,6 +238,12 @@ mark.todo { background: #f6e6b4; color: #6b4b00; padding: 0 .3em; border-radius:
 }
 .gallery .ph figcaption { position: static; background: none; color: var(--muted); padding: 1rem; text-align: center; }
 .gallery .ph figcaption::after { content: "Zdjęcie wkrótce"; display: block; font-family: var(--serif); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 1rem; font-weight: 400; }
+/* Album – kafelek otwierający kilka zdjęć */
+.album-count {
+  position: absolute; top: 12px; right: 12px; padding: .35em .8em;
+  background: rgba(252, 251, 248, .92); color: var(--text);
+  font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 500; pointer-events: none;
+}
 .gallery-more { margin-top: 2.5rem; color: var(--muted); }
 
 /* Okolica */
@@ -319,8 +325,24 @@ mark.todo { background: #f6e6b4; color: #6b4b00; padding: 0 .3em; border-radius:
 /* Powiększenie zdjęcia */
 .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(25, 22, 18, .94); display: flex; align-items: center; justify-content: center; padding: 20px; }
 .lightbox[hidden] { display: none; }
-.lightbox img { max-height: 90vh; }
-.lightbox-close { position: absolute; top: 12px; right: 18px; background: none; border: 0; color: var(--white); font-size: 2.5rem; cursor: pointer; font-weight: 300; }
+.lightbox img { max-height: 86vh; max-width: min(100%, 1100px); object-fit: contain; }
+.lightbox-close { position: absolute; top: 12px; right: 18px; background: none; border: 0; color: var(--white); font-size: 2.5rem; cursor: pointer; font-weight: 300; z-index: 2; }
+.lightbox-prev, .lightbox-next {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 52px; height: 52px; border: 1px solid rgba(255,255,255,.5); background: rgba(25,22,18,.35);
+  color: var(--white); font-size: 2rem; line-height: 1; cursor: pointer; transition: background .2s;
+}
+.lightbox-prev { left: 18px; }
+.lightbox-next { right: 18px; }
+.lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,.2); }
+.lightbox.single .lightbox-prev, .lightbox.single .lightbox-next { display: none; }
+.lightbox-count { position: absolute; bottom: 14px; left: 0; right: 0; margin: 0; text-align: center; color: rgba(255,255,255,.8); font-size: .8rem; letter-spacing: .2em; }
+@media (max-width: 640px) {
+  .lightbox { padding: 60px 0; }
+  .lightbox-prev, .lightbox-next { width: 42px; height: 42px; font-size: 1.6rem; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}
 
 /* Delikatne pojawianie się przy przewijaniu */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
