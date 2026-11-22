@@ -190,10 +190,13 @@ mark.todo { background: #f6e6b4; color: #6b4b00; padding: 0 .3em; border-radius:
 
 /* Domki */
 .unit { display: grid; grid-template-columns: 1.25fr 1fr; gap: 5rem; align-items: center; margin-top: 4.5rem; }
-.unit-reverse .unit-img { order: 2; }
+.unit-reverse .unit-media { order: 2; }
 .unit-img { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; }
 .unit-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
-.unit:hover .unit-img img { transform: scale(1.03); }
+.unit-img:hover img { transform: scale(1.03); }
+.unit-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.unit-thumbs img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: opacity .3s; }
+.unit-thumbs img:hover { opacity: .85; }
 .unit-type { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--wood); font-weight: 500; margin-bottom: .6em; }
 .unit h3 { font-size: 2.3rem; margin-bottom: .2em; }
 .unit-meta { color: var(--muted); margin-bottom: 1.4rem; }
@@ -332,7 +335,7 @@ mark.todo { background: #f6e6b4; color: #6b4b00; padding: 0 .3em; border-radius:
    ========================================================= */
 @media (max-width: 980px) {
   .unit { grid-template-columns: 1fr; gap: 2rem; margin-top: 4rem; }
-  .unit-reverse .unit-img { order: 0; }
+  .unit-reverse .unit-media { order: 0; }
   .contact { grid-template-columns: 1fr; gap: 3rem; }
   .places { grid-template-columns: 1fr 1fr; }
   .places li:not(:nth-child(4n)) { border-right: 0; }

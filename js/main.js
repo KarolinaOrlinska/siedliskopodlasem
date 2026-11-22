@@ -102,7 +102,7 @@ document.querySelectorAll('.rev-btn').forEach(btn => {
 // Powiększanie zdjęć (galeria i domki)
 const lightbox = document.getElementById('lightbox');
 const lbImg = lightbox.querySelector('img');
-document.querySelectorAll('.gallery img, .unit-img img').forEach(img => {
+document.querySelectorAll('.gallery img, .unit-img img, .unit-thumbs img').forEach(img => {
   img.style.cursor = 'zoom-in';
   img.addEventListener('click', () => {
     lbImg.src = img.src;
