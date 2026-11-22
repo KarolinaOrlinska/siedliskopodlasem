@@ -4,22 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Siedlisko pod Lasem – domki na wynajem na Roztoczu | Józefów</title>
-  <meta name="description" content="Siedlisko pod Lasem w Długim Kącie koło Józefowa – przytulne, w pełni wyposażone domki pod lasem w sercu Roztocza. Cisza, ogród, plac zabaw, zwierzęta mile widziane. Zadzwoń: 509 280 516.">
-  <meta name="theme-color" content="#5f6b36">
+  <meta name="description" content="Siedlisko pod Lasem w Długim Kącie koło Józefowa – przytulne, w pełni wyposażone domki i mieszkania pod lasem w sercu Roztocza. Ogród, plac zabaw, rowery, zwierzęta mile widziane. Zadzwoń: 509 280 516.">
+  <meta name="theme-color" content="#f5f2ec">
 
-  <!-- Podgląd linku w Facebooku / Messengerze -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:title" content="Siedlisko pod Lasem – domki na Roztoczu">
   <meta property="og:description" content="Przytulne domki pod lasem w sercu Roztocza. Cisza, natura i odpoczynek dla rodzin, par i ich zwierzaków.">
-  <meta property="og:image" content="images/logo.png">
+  <meta property="og:image" content="images/start-siedlisko.jpg">
 
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="icon" type="image/png" href="images/logo-jasne-tlo.png">
+  <link rel="apple-touch-icon" href="images/logo-jasne-tlo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -28,9 +27,10 @@
     "@type": "LodgingBusiness",
     "name": "Siedlisko pod Lasem",
     "description": "Agroturystyka z domkami na wynajem pod lasem w sercu Roztocza.",
-    "image": "images/logo.png",
+    "image": "images/start-siedlisko.jpg",
     "telephone": "+48509280516",
     "email": "siedliskopodlasem98@gmail.com",
+    "priceRange": "od 399 zł",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Długi Kąt 98",
@@ -39,6 +39,7 @@
       "addressRegion": "lubelskie",
       "addressCountry": "PL"
     },
+    "geo": { "@type": "GeoCoordinates", "latitude": 50.48709, "longitude": 23.13107 },
     "petsAllowed": true,
     "checkinTime": "15:00",
     "checkoutTime": "11:00",
@@ -51,267 +52,257 @@
 </head>
 <body>
 
-<!-- ============ GÓRNE MENU ============ -->
+<!-- ============ NAGŁÓWEK ============ -->
 <header class="site-header" id="top">
-  <div class="container header-inner">
-    <a href="#start" class="brand" aria-label="Siedlisko pod Lasem – strona główna">
-      <img src="images/logo.png" alt="" width="44" height="44">
-      <span>Siedlisko pod Lasem</span>
-    </a>
-    <button class="menu-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-nav">
-      <span></span><span></span><span></span>
-    </button>
-    <nav id="main-nav" class="main-nav" aria-label="Menu główne">
-      <a href="#o-siedlisku">O siedlisku</a>
-      <a href="#domki">Domki</a>
-      <a href="#cennik">Cennik</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#okolica">Okolica</a>
-      <a href="#opinie">Opinie</a>
-      <a href="#kontakt" class="nav-cta">Zapytaj o termin</a>
-    </nav>
-  </div>
+  <button class="menu-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu">
+    <span class="burger" aria-hidden="true"><i></i><i></i></span>
+    <span class="menu-label">Menu</span>
+  </button>
+  <a href="#start" class="brand" aria-label="Siedlisko pod Lasem – strona główna">
+    <img class="logo-white" src="images/logo-biale.png" alt="" width="84" height="84">
+    <img class="logo-green" src="images/logo-zielone.png" alt="" width="84" height="84">
+  </a>
+  <a href="tel:+48509280516" class="header-phone" aria-label="Zadzwoń: 509 280 516">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+    <span>509 280 516</span>
+  </a>
 </header>
+
+<!-- Pełnoekranowe menu -->
+<nav class="menu" id="menu" aria-label="Menu główne" hidden>
+  <ul>
+    <li><a href="#o-siedlisku">O siedlisku</a></li>
+    <li><a href="#domki">Domki</a></li>
+    <li><a href="#cennik">Cennik</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#okolica">Okolica</a></li>
+    <li><a href="#opinie">Opinie</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+  <p class="menu-contact"><a href="tel:+48509280516">509 280 516</a><br><a href="mailto:siedliskopodlasem98@gmail.com">siedliskopodlasem98@gmail.com</a></p>
+</nav>
 
 <main>
 
 <!-- ============ START ============ -->
-<!-- Aby wstawić prawdziwe zdjęcie w tle: wrzuć plik do folderu images (np. images/hero.jpg)
-     i w pliku css/style.css odkomentuj linię z "hero.jpg" w sekcji .hero -->
 <section class="hero" id="start">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <img class="hero-logo" src="images/logo.png" alt="Logo Siedliska pod Lasem – domek wśród roślin, Roztocze, od 2021 roku" width="180" height="180">
-    <h1>Domki pod lasem<br><em>w sercu Roztocza</em></h1>
-    <p class="hero-lead">Cisza, zapach lasu i ciepło drewna. Miejsce, w którym zwalnia się tempo – dla rodzin, par i ich czworonogów.</p>
+  <img class="hero-img" src="images/start-siedlisko.jpg" alt="Domek z pergolą porośniętą winoroślą, miejsce na ognisko i huśtawka w ogrodzie Siedliska pod Lasem" fetchpriority="high">
+  <div class="hero-content">
+    <p class="kicker">Agroturystyka · Roztocze</p>
+    <h1>Siedlisko pod Lasem</h1>
+    <p class="hero-lead">Przytulne domki tuż pod lasem, w sercu Roztocza</p>
     <div class="hero-buttons">
-      <a href="tel:+48509280516" class="btn btn-light">Zadzwoń: 509 280 516</a>
-      <a href="#kontakt" class="btn btn-outline">Zapytaj o wolny termin</a>
+      <a href="#kontakt" class="btn btn-white">Zapytaj o termin</a>
+      <a href="#domki" class="btn btn-ghost">Zobacz domki</a>
     </div>
-    <ul class="hero-badges" aria-label="Najważniejsze zalety">
-      <li>Bezpośrednie wyjście do lasu</li>
-      <li>Zwierzęta mile widziane</li>
-      <li>9,3/10 w opiniach gości</li>
-    </ul>
   </div>
+  <a href="#o-siedlisku" class="scroll-hint" aria-label="Przewiń w dół"></a>
 </section>
 
 <!-- ============ O SIEDLISKU ============ -->
 <section class="section" id="o-siedlisku">
-  <div class="container two-col">
-    <div>
-      <p class="eyebrow">O siedlisku</p>
-      <h2>Miejsce stworzone z pasją i drewnem z rodzinnej stolarni</h2>
-      <p>Siedlisko pod Lasem to dawne gospodarstwo w malowniczej wsi Długi Kąt, tuż pod Józefowem – w samym sercu Roztocza. Z ogrodu prowadzi ścieżka prosto do lasu, a wokół rozciągają się pagórki, łąki i doliny, które aż proszą się o spacer albo wycieczkę rowerem.</p>
-      <p>Gospodarzami są Jadwiga i Jan. Jan w rodzinnej stolarni tworzy meble i dekoracje, które znajdziecie w naszych domkach. Jadwiga dba o ogród pełen kwiatów i zacisznych zakątków. Chcemy, żeby każdy gość poczuł się u nas jak w domu.</p>
-      <p>Każdy domek ma własny kawałek ogrodu i taras, więc goście nie wchodzą sobie w drogę – jest spokojnie i prywatnie.</p>
-    </div>
-    <figure class="photo photo-tall">
-      <!-- Zamień na: <img src="images/gospodarze.jpg" alt="Gospodarze Siedliska przed domkiem"> -->
-      <figcaption>Miejsce na zdjęcie: gospodarze lub siedlisko z lotu ptaka</figcaption>
-    </figure>
+  <div class="container narrow center">
+    <p class="kicker">O siedlisku</p>
+    <h2>Miejsce, w którym zwalnia się tempo</h2>
+    <p class="lead">Siedlisko pod Lasem to dawne gospodarstwo w malowniczej wsi Długi Kąt koło Józefowa. Z ogrodu prowadzi ścieżka prosto do lasu, a wokół rozciągają się pagórki, łąki i doliny Roztocza.</p>
+    <p>Gospodarzami są Jadwiga i Jan. Jan w rodzinnej stolarni tworzy meble i dekoracje, które znajdziecie w naszych domkach. Jadwiga dba o ogród pełen kwiatów i zacisznych zakątków. Każdy domek ma własny kawałek ogrodu i taras, więc jest spokojnie i prywatnie.</p>
+  </div>
+
+  <div class="container photo-pair">
+    <figure><img src="images/domek-bluszcz.jpg" alt="Domek porośnięty bluszczem z drewnianymi drzwiami" loading="lazy"></figure>
+    <figure><img src="images/pergola-wieczorem.jpg" alt="Pergola z lampkami i stołem przed domem wieczorem" loading="lazy"></figure>
   </div>
 
   <div class="container">
     <ul class="features">
-      <li><span class="icon" aria-hidden="true">🌲</span><strong>Las tuż za ogrodem</strong><span>Wyjście do lasu prosto z terenu siedliska.</span></li>
-      <li><span class="icon" aria-hidden="true">🐾</span><strong>Przyjaźni zwierzakom</strong><span>Ogrodzone ogródki, legowisko i miski dla pupila.</span></li>
-      <li><span class="icon" aria-hidden="true">🧒</span><strong>Dla całej rodziny</strong><span>Plac zabaw, piłkarzyki i tenis stołowy.</span></li>
-      <li><span class="icon" aria-hidden="true">🔥</span><strong>Ognisko i grill</strong><span>Wieczory przy ogniu i ogród z leżakami.</span></li>
-      <li><span class="icon" aria-hidden="true">🚲</span><strong>Rowery na miejscu</strong><span>Wypożyczysz rower i ruszysz na szlak.</span></li>
-      <li><span class="icon" aria-hidden="true">📶</span><strong>Wi-Fi i parking</strong><span>Bezpłatnie, na terenie siedliska.</span></li>
+      <li><strong>Las za ogrodem</strong><span>Wyjście do lasu prosto z terenu siedliska</span></li>
+      <li><strong>Zwierzęta mile widziane</strong><span>Ogrodzone ogródki, legowisko i miski dla pupila</span></li>
+      <li><strong>Dla rodzin z dziećmi</strong><span>Plac zabaw, trampolina, piłkarzyki, ping-pong</span></li>
+      <li><strong>Ognisko i grill</strong><span>Ogród z leżakami, huśtawką i miejscem na ognisko</span></li>
+      <li><strong>Rowery na miejscu</strong><span>Wypożyczysz rower i ruszysz na szlak</span></li>
+      <li><strong>Wi-Fi i parking</strong><span>Bezpłatnie, na terenie siedliska</span></li>
     </ul>
   </div>
 </section>
 
 <!-- ============ DOMKI ============ -->
-<section class="section section-sand" id="domki">
+<section class="section section-alt" id="domki">
+  <div class="container center">
+    <p class="kicker">Oferta</p>
+    <h2>Nasze domki</h2>
+  </div>
+
   <div class="container">
-    <p class="eyebrow center">Oferta</p>
-    <h2 class="center">Nasze domki</h2>
-    <p class="section-lead">Każdy domek ma prywatną, w pełni wyposażoną kuchnię, łazienkę z prysznicem, część wypoczynkową z rozkładaną sofą, telewizor, taras i widok na ogród.</p>
+    <article class="unit">
+      <figure class="unit-img"><img src="images/dom-wakacyjny.jpg" alt="Wolnostojący dom wakacyjny z kamienną elewacją i zadaszonym tarasem" loading="lazy"></figure>
+      <div class="unit-text">
+        <p class="unit-type">Domek wolnostojący na wyłączność</p>
+        <h3>Dom wakacyjny</h3>
+        <p class="unit-meta">60 m² · do 6 osób</p>
+        <ul class="ticks">
+          <li>Sypialnia: 2 łóżka podwójne i 1 pojedyncze</li>
+          <li>Salon z rozkładaną sofą</li>
+          <li>Własny taras i grill</li>
+        </ul>
+        <a href="#kontakt" class="link-arrow" data-domek="Dom wakacyjny">Zapytaj o ten domek</a>
+      </div>
+    </article>
 
-    <div class="cards">
-      <article class="card">
-        <figure class="photo">
-          <!-- Zamień na: <img src="images/domek-1.jpg" alt="Dom wakacyjny – wnętrze z drewnianymi meblami"> -->
-          <figcaption>Miejsce na zdjęcie domku</figcaption>
-        </figure>
-        <div class="card-body">
-          <h3>Dom wakacyjny</h3>
-          <p class="card-meta">60 m² · do 6 osób</p>
-          <ul class="ticks">
-            <li>Sypialnia: 2 łóżka podwójne + 1 pojedyncze</li>
-            <li>Salon z rozkładaną sofą</li>
-            <li>Własny grill i taras</li>
-            <li>Kuchnia z ekspresem do kawy</li>
-          </ul>
-          <a href="#kontakt" class="btn btn-small" data-domek="Dom wakacyjny">Zapytaj o ten domek</a>
-        </div>
-      </article>
+    <article class="unit unit-reverse">
+      <figure class="unit-img"><img src="images/dom-1-sypialnia.jpg" alt="Wnętrze mieszkania – łóżko, sofa i kominek" loading="lazy"></figure>
+      <div class="unit-text">
+        <p class="unit-type">Mieszkanie na wyłączność · dom bliźniak</p>
+        <h3>Dom z 1 sypialnią</h3>
+        <p class="unit-meta">50 m² · do 6 osób</p>
+        <ul class="ticks">
+          <li>Sypialnia: 2 duże łóżka podwójne i 1 pojedyncze</li>
+          <li>Salon z rozkładaną sofą</li>
+          <li>Własny taras i grill</li>
+        </ul>
+        <a href="#kontakt" class="link-arrow" data-domek="Dom z 1 sypialnią">Zapytaj o ten domek</a>
+      </div>
+    </article>
 
-      <article class="card">
-        <figure class="photo">
-          <!-- Zamień na: <img src="images/domek-2.jpg" alt="Dom z 1 sypialnią – sypialnia"> -->
-          <figcaption>Miejsce na zdjęcie domku</figcaption>
-        </figure>
-        <div class="card-body">
-          <h3>Dom z 1 sypialnią</h3>
-          <p class="card-meta">50 m² · do 6 osób</p>
-          <ul class="ticks">
-            <li>Sypialnia: 2 duże łóżka podwójne + 1 pojedyncze</li>
-            <li>Salon z rozkładaną sofą</li>
-            <li>Własny grill i taras</li>
-            <li>Kuchnia z ekspresem do kawy</li>
-          </ul>
-          <a href="#kontakt" class="btn btn-small" data-domek="Dom z 1 sypialnią">Zapytaj o ten domek</a>
-        </div>
-      </article>
+    <article class="unit">
+      <figure class="unit-img"><img src="images/mieszkanie-poddasze.jpg" alt="Mieszkanie na poddaszu z drewnianym sufitem i jadalnią" loading="lazy"></figure>
+      <div class="unit-text">
+        <p class="unit-type">Mieszkanie na poddaszu</p>
+        <h3>Mieszkanie z 2 sypialniami</h3>
+        <p class="unit-meta">60 m² · do 6 osób</p>
+        <ul class="ticks">
+          <li>Sypialnia 1: łóżko podwójne i pojedyncze</li>
+          <li>Sypialnia 2: 3 łóżka pojedyncze</li>
+          <li>Balkon z widokiem i taras</li>
+        </ul>
+        <a href="#kontakt" class="link-arrow" data-domek="Mieszkanie z 2 sypialniami">Zapytaj o to mieszkanie</a>
+      </div>
+    </article>
 
-      <article class="card">
-        <figure class="photo">
-          <!-- Zamień na: <img src="images/domek-3.jpg" alt="Dom z 2 sypialniami – widok z balkonu"> -->
-          <figcaption>Miejsce na zdjęcie domku</figcaption>
-        </figure>
-        <div class="card-body">
-          <h3>Dom z 2 sypialniami</h3>
-          <p class="card-meta">60 m² · do <mark class="todo">[DO UZUPEŁNIENIA: 4 czy 6?]</mark> osób</p>
-          <ul class="ticks">
-            <li>Sypialnia 1: łóżko podwójne + pojedyncze</li>
-            <li>Sypialnia 2: 3 łóżka pojedyncze</li>
-            <li>Balkon i taras</li>
-            <li>Kuchnia z ekspresem do kawy</li>
-          </ul>
-          <a href="#kontakt" class="btn btn-small" data-domek="Dom z 2 sypialniami">Zapytaj o ten domek</a>
-        </div>
-      </article>
+    <div class="equipment">
+      <h3>W każdym domku</h3>
+      <ul>
+        <li>Pościel i ręczniki</li>
+        <li>Kosmetyki</li>
+        <li>Suszarka do włosów</li>
+        <li>Pralka</li>
+        <li>Aneks kuchenny</li>
+        <li>Lodówka</li>
+        <li>Ekspres do kawy i czajnik</li>
+        <li>Łazienka z prysznicem</li>
+        <li>Telewizor</li>
+        <li>Bezpłatne Wi-Fi</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ============ CENNIK ============ -->
 <section class="section" id="cennik">
+  <div class="container narrow center">
+    <p class="kicker">Cennik</p>
+    <h2>Ceny pobytu</h2>
+    <p class="price-main"><span>od 399 zł</span> za dobę</p>
+    <p class="price-sub">cena za cały domek dla 1–2 osób</p>
+  </div>
   <div class="container narrow">
-    <p class="eyebrow center">Cennik</p>
-    <h2 class="center">Ceny pobytu</h2>
-    <p class="section-lead">Ceny podajemy za cały domek za jedną noc. Najlepszą cenę na wybrany termin podamy przez telefon.</p>
-
-    <div class="table-wrap">
-      <table class="price-table">
-        <thead>
-          <tr><th scope="col">Domek</th><th scope="col">Za noc (2 osoby)</th><th scope="col">Dodatkowa osoba</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">Dom wakacyjny</th><td>od 399 zł</td><td><mark class="todo">[DO UZUPEŁNIENIA] zł</mark></td></tr>
-          <tr><th scope="row">Dom z 1 sypialnią</th><td>od 399 zł</td><td><mark class="todo">[DO UZUPEŁNIENIA] zł</mark></td></tr>
-          <tr><th scope="row">Dom z 2 sypialniami</th><td>od 399 zł</td><td><mark class="todo">[DO UZUPEŁNIENIA] zł</mark></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="table-note"><mark class="todo">[DO UZUPEŁNIENIA: potwierdź ceny – „od 399 zł” to cena z Booking.com dla 2 osób w grudniu 2026; przy rezerwacji bezpośredniej i w sezonie letnim może być inna]</mark></p>
-
-    <ul class="info-list">
-      <li><strong>Zameldowanie:</strong> 15:00–20:00 · <strong>wymeldowanie:</strong> 8:00–11:00</li>
-      <li><strong>Minimalny pobyt:</strong> <mark class="todo">[DO UZUPEŁNIENIA]</mark></li>
-      <li><strong>Zwierzęta:</strong> mile widziane, dodatkowa opłata płatna na miejscu: <mark class="todo">[DO UZUPEŁNIENIA] zł</mark></li>
-      <li><strong>Dzieci:</strong> w każdym wieku mile widziane, łóżeczko dziecięce na zapytanie</li>
-      <li><strong>W cenie:</strong> Wi-Fi, parking, pościel i ręczniki <mark class="todo">[DO UZUPEŁNIENIA: potwierdź]</mark></li>
-      <li>W domkach obowiązuje zakaz palenia.</li>
-    </ul>
+    <dl class="price-list">
+      <div><dt>Każda kolejna osoba</dt><dd>+ 30 zł / doba</dd></div>
+      <div><dt>Zwierzak</dt><dd>ok. 10 zł / doba<small>w zależności od wielkości, płatne na miejscu</small></dd></div>
+      <div><dt>Minimalny pobyt</dt><dd>2 doby</dd></div>
+      <div><dt>Zameldowanie</dt><dd>15:00 – 20:00</dd></div>
+      <div><dt>Wymeldowanie</dt><dd>8:00 – 11:00</dd></div>
+      <div><dt>W cenie</dt><dd>pościel, ręczniki, kosmetyki, Wi-Fi, parking</dd></div>
+    </dl>
+    <p class="note center">Dzieci w każdym wieku są mile widziane, łóżeczko dziecięce na zapytanie. W domkach obowiązuje zakaz palenia.</p>
   </div>
 </section>
 
 <!-- ============ GALERIA ============ -->
-<!-- Aby dodać zdjęcie: zamień <figure class="photo">...</figure>
-     na <figure class="photo"><img src="images/nazwa.jpg" alt="krótki opis zdjęcia"></figure> -->
-<section class="section section-forest" id="galeria">
-  <div class="container">
-    <p class="eyebrow center light">Galeria</p>
-    <h2 class="center">Zajrzyj do Siedliska</h2>
-    <div class="gallery">
-      <figure class="photo"><figcaption>Ogród i leżaki</figcaption></figure>
-      <figure class="photo"><figcaption>Wnętrze domku</figcaption></figure>
-      <figure class="photo"><figcaption>Ścieżka do lasu</figcaption></figure>
-      <figure class="photo"><figcaption>Taras i pergola</figcaption></figure>
-      <figure class="photo"><figcaption>Miejsce na ognisko</figcaption></figure>
-      <figure class="photo"><figcaption>Plac zabaw</figcaption></figure>
-      <figure class="photo"><figcaption>Meble z rodzinnej stolarni</figcaption></figure>
-      <figure class="photo"><figcaption>Roztocze jesienią</figcaption></figure>
-    </div>
-    <p class="center gallery-more">Więcej zdjęć na naszym <a href="https://www.instagram.com/siedliskopodlasem_roztocze/" target="_blank" rel="noopener">Instagramie</a>.</p>
+<!-- Aby dodać zdjęcie w puste miejsce: zamień <figure class="ph">...</figure>
+     na <figure><img src="images/nazwa.jpg" alt="krótki opis"><figcaption>Podpis</figcaption></figure> -->
+<section class="section section-alt" id="galeria">
+  <div class="container center">
+    <p class="kicker">Galeria</p>
+    <h2>Zajrzyj do Siedliska</h2>
   </div>
+  <div class="container gallery">
+    <figure><img src="images/ogrod.jpg" alt="Ogród z drewnianą huśtawką i leżakami" loading="lazy"><figcaption>Ogród</figcaption></figure>
+    <figure><img src="images/wnetrze-poddasze.jpg" alt="Wnętrze mieszkania na poddaszu z drewnianymi meblami" loading="lazy"><figcaption>Wnętrze domków</figcaption></figure>
+    <figure class="ph"><figcaption>Ścieżka do lasu</figcaption></figure>
+    <figure><img src="images/otoczenie.jpg" alt="Zielony teren siedliska na tle lasu" loading="lazy"><figcaption>Otoczenie</figcaption></figure>
+    <figure><img src="images/grill.jpg" alt="Grill w ogrodzie o zachodzie słońca" loading="lazy"><figcaption>Ognisko i grill</figcaption></figure>
+    <figure><img src="images/plac-zabaw.jpg" alt="Trampolina i plac zabaw przy domkach" loading="lazy"><figcaption>Plac zabaw</figcaption></figure>
+    <figure class="ph"><figcaption>Roztocze jesienią</figcaption></figure>
+    <figure class="ph"><figcaption>Roztocze zimą</figcaption></figure>
+  </div>
+  <p class="center gallery-more">Więcej zdjęć na <a href="https://www.instagram.com/siedliskopodlasem_roztocze/" target="_blank" rel="noopener">Instagramie</a> i <a href="https://www.facebook.com/siedliskopodlasemroztocze/" target="_blank" rel="noopener">Facebooku</a></p>
 </section>
 
 <!-- ============ OKOLICA ============ -->
 <section class="section" id="okolica">
+  <div class="container narrow center">
+    <p class="kicker">Atrakcje w okolicy</p>
+    <h2>Roztocze na wyciągnięcie ręki</h2>
+    <p class="lead">Lasy, rzeki, szlaki i urokliwe miasteczka. Na miejscu chętnie podpowiemy, gdzie warto się wybrać.</p>
+  </div>
   <div class="container">
-    <p class="eyebrow center">Atrakcje w okolicy</p>
-    <h2 class="center">Roztocze na wyciągnięcie ręki</h2>
-    <p class="section-lead">Lasy, rzeki, szlaki i urokliwe miasteczka. Na miejscu chętnie podpowiemy, gdzie warto się wybrać.</p>
-
-    <div class="attractions">
-      <article><h3>Roztoczański Park Narodowy</h3><p class="dist">ok. 10 km</p><p>Piesze i rowerowe szlaki przez stare lasy i wzgórza – jeden z najpiękniejszych parków narodowych w Polsce.</p></article>
-      <article><h3>Szumy na Tanwi</h3><p class="dist"><mark class="todo">[DO UZUPEŁNIENIA] km</mark></p><p>Niewielkie wodospady na rzece Tanew – wizytówka Roztocza i świetny cel spaceru.</p></article>
-      <article><h3>Rezerwat Czartowe Pole</h3><p class="dist"><mark class="todo">[DO UZUPEŁNIENIA] km</mark></p><p>Rzeka Sopot tworzy tu serię kaskad. Idealne miejsce na spokojny spacer z dziećmi.</p></article>
-      <article><h3>Zwierzyniec</h3><p class="dist"><mark class="todo">[DO UZUPEŁNIENIA] km</mark></p><p>Kościółek na Wodzie, tradycje piwowarskie i Ośrodek Edukacyjno-Muzealny Roztoczańskiego Parku Narodowego.</p></article>
-      <article><h3>Zamość</h3><p class="dist">ok. 37 km · ok. 30 min autem</p><p>Renesansowa „perła” wpisana na listę UNESCO – rynek, ratusz i klimatyczne kamienice.</p></article>
-      <article><h3>Józefów</h3><p class="dist">ok. 5 km</p><p>Lody z tradycją, pierogarnia i sala zabaw dla dzieci na deszczowy dzień.</p></article>
-      <article><h3>Rowery i kajaki</h3><p class="dist">na miejscu i w okolicy</p><p>Rowery wypożyczysz u nas. W okolicy działają też spływy kajakowe i jazda konna.</p></article>
-      <article><h3>Pociąg</h3><p class="dist">stacja Długi Kąt – ok. 2,6 km</p><p>Do Siedliska można dojechać także koleją.</p></article>
-    </div>
+    <ul class="places">
+      <li><span class="dist">7 km · 10 min</span><h3>Rezerwat Czartowe Pole</h3><p>Rzeka Sopot tworzy tu kaskady wśród lasu. Idealny spacer z dziećmi.</p></li>
+      <li><span class="dist">6 km · 7 min</span><h3>Józefów</h3><p>Rynek z fontanną, lody z tradycją, pierogarnia i sala zabaw na deszczowy dzień.</p></li>
+      <li><span class="dist">ok. 10 km</span><h3>Roztoczański Park Narodowy</h3><p>Piesze i rowerowe szlaki przez stare lasy i wzgórza.</p></li>
+      <li><span class="dist">10 km · 11 min</span><h3>Krasnobród</h3><p>Uzdrowiskowe miasteczko z zalewem i plażą.</p></li>
+      <li><span class="dist">19 km · 20 min</span><h3>Szumy na Tanwi</h3><p>Niewielkie wodospady na rzece Tanew – wizytówka Roztocza.</p></li>
+      <li><span class="dist">21 km · 21 min</span><h3>Zwierzyniec</h3><p>Kościółek na Wodzie, tradycje piwowarskie i ośrodek muzealny Roztoczańskiego Parku Narodowego.</p></li>
+      <li><span class="dist">36 km · 40 min</span><h3>Zamość</h3><p>Renesansowa „perła” z listy UNESCO – rynek, ratusz i kamienice.</p></li>
+      <li><span class="dist">na miejscu</span><h3>Rowery i kajaki</h3><p>Rowery wypożyczysz u nas, a w okolicy działają spływy kajakowe i jazda konna.</p></li>
+    </ul>
+    <p class="note center">Do Siedliska dojedziesz także pociągiem – stacja Długi Kąt jest ok. 2,6 km od nas.</p>
   </div>
 </section>
 
 <!-- ============ OPINIE ============ -->
-<section class="section section-sand" id="opinie">
-  <div class="container">
-    <p class="eyebrow center">Opinie gości</p>
-    <h2 class="center">Goście o Siedlisku</h2>
-
-    <div class="rating">
-      <div class="rating-score"><span>9,3</span>/10</div>
-      <div>
-        <p class="rating-label">Znakomity – na podstawie 54 opinii w serwisie Booking.com</p>
-        <ul class="rating-bars">
-          <li>Czystość <b>9,8</b></li>
-          <li>Gospodarze <b>9,8</b></li>
-          <li>Lokalizacja <b>9,5</b></li>
-          <li>Komfort <b>9,2</b></li>
-        </ul>
-      </div>
+<section class="section section-alt" id="opinie">
+  <div class="container center">
+    <p class="kicker">Opinie gości</p>
+    <h2>Goście o Siedlisku</h2>
+    <div class="scores">
+      <a class="score" href="https://www.google.com/maps/place/Siedlisko+pod+Lasem/@50.4870899,23.131072,17z" target="_blank" rel="noopener">
+        <span class="score-num">5,0</span><span class="score-of">/ 5</span>
+        <span class="score-src">Google · 47 opinii</span>
+      </a>
+      <a class="score" href="https://www.booking.com/hotel/pl/siedlisko-pod-lasem-jozefow.pl.html#tab-reviews" target="_blank" rel="noopener">
+        <span class="score-num">9,3</span><span class="score-of">/ 10</span>
+        <span class="score-src">Booking.com · 54 opinie</span>
+      </a>
     </div>
-
-    <!-- Wklej tu prawdziwe opinie gości (np. z Bookingu lub Google), podając imię autora. -->
-    <div class="reviews">
-      <blockquote class="review"><p><mark class="todo">[DO UZUPEŁNIENIA: treść opinii gościa]</mark></p><footer>– Imię gościa</footer></blockquote>
-      <blockquote class="review"><p><mark class="todo">[DO UZUPEŁNIENIA: treść opinii gościa]</mark></p><footer>– Imię gościa</footer></blockquote>
-      <blockquote class="review"><p><mark class="todo">[DO UZUPEŁNIENIA: treść opinii gościa]</mark></p><footer>– Imię gościa</footer></blockquote>
-    </div>
+  </div>
+  <!-- Wklej tu prawdziwe opinie gości, podając imię autora i źródło. -->
+  <div class="container reviews">
+    <blockquote class="review"><p><mark class="todo">[DO UZUPEŁNIENIA: treść opinii gościa]</mark></p><footer>Imię · Google</footer></blockquote>
+    <blockquote class="review"><p><mark class="todo">[DO UZUPEŁNIENIA: treść opinii gościa]</mark></p><footer>Imię · Booking.com</footer></blockquote>
+    <blockquote class="review"><p><mark class="todo">[DO UZUPEŁNIENIA: treść opinii gościa]</mark></p><footer>Imię · Google</footer></blockquote>
   </div>
 </section>
 
 <!-- ============ KONTAKT ============ -->
 <section class="section" id="kontakt">
-  <div class="container two-col contact">
+  <div class="container contact">
     <div>
-      <p class="eyebrow">Kontakt i rezerwacje</p>
-      <h2>Zarezerwuj swój pobyt</h2>
+      <p class="kicker">Kontakt i rezerwacje</p>
+      <h2>Zarezerwuj pobyt</h2>
       <p>Najszybciej zarezerwujesz telefonicznie – odbieramy o każdej porze. Możesz też zostawić zapytanie w formularzu, a oddzwonimy lub odpiszemy.</p>
-
       <a href="tel:+48509280516" class="phone-big">509 280 516</a>
-
       <ul class="contact-list">
         <li><span>E-mail</span><a href="mailto:siedliskopodlasem98@gmail.com">siedliskopodlasem98@gmail.com</a></li>
-        <li><span>Adres</span>Długi Kąt 98, 23-460 Józefów<br>woj. lubelskie</li>
-        <li><span>Godziny</span>Całą dobę</li>
-        <li><span>Social media</span>
+        <li><span>Adres</span>Długi Kąt 98, 23-460 Józefów, woj. lubelskie</li>
+        <li><span>Telefon</span>Całą dobę</li>
+        <li><span>Znajdziesz nas</span>
           <a href="https://www.instagram.com/siedliskopodlasem_roztocze/" target="_blank" rel="noopener">Instagram</a> ·
           <a href="https://www.facebook.com/siedliskopodlasemroztocze/" target="_blank" rel="noopener">Facebook</a>
         </li>
       </ul>
-
       <div class="map">
-        <iframe title="Mapa dojazdu do Siedliska pod Lasem" src="https://www.google.com/maps?q=D%C5%82ugi+K%C4%85t+98,+23-460+J%C3%B3zef%C3%B3w&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="Mapa dojazdu do Siedliska pod Lasem" src="https://www.google.com/maps?q=Siedlisko+pod+Lasem,+D%C5%82ugi+K%C4%85t+98,+23-460+J%C3%B3zef%C3%B3w&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 
@@ -339,7 +330,7 @@
             <option>Dowolny</option>
             <option>Dom wakacyjny</option>
             <option>Dom z 1 sypialnią</option>
-            <option>Dom z 2 sypialniami</option>
+            <option>Mieszkanie z 2 sypialniami</option>
           </select>
         </label>
       </div>
@@ -354,7 +345,7 @@
       <label>Wiadomość<textarea name="Wiadomość" rows="4" placeholder="Np. liczba dzieci, pytania o pobyt…"></textarea></label>
       <label class="consent"><input type="checkbox" name="Zgoda" required> Wyrażam zgodę na kontakt w sprawie mojego zapytania. *</label>
 
-      <button type="submit" class="btn btn-full">Wyślij zapytanie</button>
+      <button type="submit" class="btn btn-dark btn-full">Wyślij zapytanie</button>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
@@ -365,27 +356,24 @@
 <!-- ============ STOPKA ============ -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <img src="images/logo.png" alt="Logo Siedliska pod Lasem" width="90" height="90" loading="lazy">
-    <div>
-      <p class="footer-name">Siedlisko pod Lasem</p>
-      <p>Długi Kąt 98, 23-460 Józefów · woj. lubelskie</p>
-      <p><a href="tel:+48509280516">509 280 516</a> · <a href="mailto:siedliskopodlasem98@gmail.com">siedliskopodlasem98@gmail.com</a></p>
-      <p>
-        <a href="https://www.instagram.com/siedliskopodlasem_roztocze/" target="_blank" rel="noopener">Instagram</a> ·
-        <a href="https://www.facebook.com/siedliskopodlasemroztocze/" target="_blank" rel="noopener">Facebook</a>
-      </p>
-    </div>
+    <img src="images/logo-zielone.png" alt="Logo Siedliska pod Lasem – domek wśród roślin, Roztocze, od 2021 roku" width="150" height="150" loading="lazy">
+    <p>Długi Kąt 98, 23-460 Józefów · woj. lubelskie</p>
+    <p><a href="tel:+48509280516">509 280 516</a> · <a href="mailto:siedliskopodlasem98@gmail.com">siedliskopodlasem98@gmail.com</a></p>
+    <p class="footer-social">
+      <a href="https://www.instagram.com/siedliskopodlasem_roztocze/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/siedliskopodlasemroztocze/" target="_blank" rel="noopener">Facebook</a>
+    </p>
+    <p class="copyright">© <span id="year">2026</span> Siedlisko pod Lasem</p>
   </div>
-  <p class="copyright">© <span id="year">2026</span> Siedlisko pod Lasem · Roztocze</p>
 </footer>
 
-<!-- Przyciski przyklejone na dole ekranu (tylko na telefonie) -->
+<!-- Pasek na dole ekranu (tylko na telefonie) -->
 <div class="mobile-bar">
-  <a href="tel:+48509280516" class="mb-call">📞 Zadzwoń</a>
-  <a href="#kontakt" class="mb-ask">✉️ Zapytaj</a>
+  <a href="tel:+48509280516">Zadzwoń</a>
+  <a href="#kontakt">Zapytaj o termin</a>
 </div>
 
-<!-- Powiększanie zdjęć w galerii -->
+<!-- Powiększanie zdjęć -->
 <div class="lightbox" id="lightbox" hidden>
   <button class="lightbox-close" aria-label="Zamknij">×</button>
   <img src="" alt="">
