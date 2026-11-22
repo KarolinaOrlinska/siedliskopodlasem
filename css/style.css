@@ -247,9 +247,27 @@ mark.todo { background: #f6e6b4; color: #6b4b00; padding: 0 .3em; border-radius:
 .score-of { font-family: var(--serif); color: var(--muted); font-size: 1.2rem; }
 .score-src { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; margin-top: .6rem; border-bottom: 1px solid var(--line); padding-bottom: .2em; }
 .score:hover .score-src { border-color: var(--text); }
-.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.review { margin: 0; padding: 2rem; background: var(--bg); text-align: center; }
-.review p { font-family: var(--serif); font-style: italic; font-size: 1.25rem; line-height: 1.6; }
+/* Opinie przesuwane w bok */
+.reviews {
+  display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; padding-bottom: 1rem; scrollbar-width: none;
+}
+.reviews::-webkit-scrollbar { display: none; }
+.reviews:focus-visible { outline: 1px solid var(--olive); }
+.review {
+  flex: 0 0 calc((100% - 48px) / 3); scroll-snap-align: start;
+  margin: 0; padding: 2.4rem 2rem 2rem; background: var(--bg); text-align: center;
+  display: flex; flex-direction: column;
+}
+.review footer { margin-top: auto; padding-top: 1rem; }
+.review::before { content: "“"; display: block; font-family: var(--serif); font-size: 3.5rem; line-height: .6; color: var(--olive); opacity: .6; margin-bottom: .6rem; }
+.review p { font-family: var(--serif); font-style: italic; font-size: 1.18rem; line-height: 1.6; }
+.reviews-nav { display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+.rev-btn {
+  width: 48px; height: 48px; border: 1px solid var(--text); background: transparent; color: var(--text);
+  font-size: 1.1rem; cursor: pointer; transition: background .2s, color .2s;
+}
+.rev-btn:hover { background: var(--dark); color: var(--white); border-color: var(--dark); }
 .review footer { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--wood); font-weight: 500; }
 
 /* Kontakt */
@@ -315,7 +333,7 @@ mark.todo { background: #f6e6b4; color: #6b4b00; padding: 0 .3em; border-radius:
   .places li:not(:nth-child(4n)) { border-right: 0; }
   .places li:nth-child(odd) { border-right: 1px solid var(--line); }
   .gallery { grid-template-columns: repeat(2, 1fr); }
-  .reviews { grid-template-columns: 1fr; max-width: 640px; margin: 0 auto; }
+  .review { flex-basis: calc((100% - 24px) / 2); }
 }
 
 /* =========================================================
@@ -350,6 +368,8 @@ mark.todo { background: #f6e6b4; color: #6b4b00; padding: 0 .3em; border-radius:
   .places { grid-template-columns: 1fr; }
   .places li { border-right: 0 !important; padding: 1.5rem 0; }
   .scores { gap: 2.5rem; }
+  .reviews { gap: 12px; align-items: flex-start; }
+  .review { flex-basis: 88%; padding: 2rem 1.4rem 1.6rem; }
 
   .contact-form { padding: 1.5rem; }
   .form-row { grid-template-columns: 1fr; }

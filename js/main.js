@@ -85,6 +85,20 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
+// Strzałki przy opiniach
+const reviews = document.getElementById('reviews');
+document.querySelectorAll('.rev-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const step = reviews.querySelector('.review').offsetWidth + parseFloat(getComputedStyle(reviews).columnGap || 0);
+    const atEnd = reviews.scrollLeft + reviews.clientWidth >= reviews.scrollWidth - 5;
+    const atStart = reviews.scrollLeft <= 5;
+    const dir = Number(btn.dataset.dir);
+    if (dir > 0 && atEnd) reviews.scrollTo({ left: 0 });
+    else if (dir < 0 && atStart) reviews.scrollTo({ left: reviews.scrollWidth });
+    else reviews.scrollBy({ left: dir * step });
+  });
+});
+
 // Powiększanie zdjęć (galeria i domki)
 const lightbox = document.getElementById('lightbox');
 const lbImg = lightbox.querySelector('img');
